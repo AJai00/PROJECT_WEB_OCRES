@@ -12,7 +12,7 @@ Ce repo git contient deux repertoires. L'un concerne la partie backend et l'autr
 
 Les deux repertoires ont été initialisé pour vous aider à démarrer le projet dans les meilleures conditions.
 
-Chacun de ces repertoires contient un README.md qui vous pouvez vous approprier. Nous vous encourageons à le faire en y mettant toute les informations nécessaires à la compréhension de votre projet
+Chacun de ces repertoires contient un README.md que vous pouvez vous approprier. Nous vous encourageons à le faire en y mettant toute les informations nécessaires à la compréhension de votre projet
 
 ## Instructions
 
