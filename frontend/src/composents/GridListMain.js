@@ -32,25 +32,30 @@ const useStyles = makeStyles(theme => ({
 
 const tileData = [
     {
-   
+        title: 'Trafic autoroutier france metropolitaine',
         cols: '5',
         widget: <Camembert/>
+
         
     },
     {    
+        title: 'Trafic autoroutier france metropolitaine',
         cols: '2',
         widget: <Courbe/>
     },
     
     {
+        title: 'Fil actualité',
         cols: '3',
         widget: <FilActu/>
     },
     {
+        title: 'Carte',
         cols: '2',
         widget: <Map/>
     },
     {
+        title: 'Météo',
         cols: '3',
     
         widget: <Weather/>
@@ -67,7 +72,7 @@ export default function GridListMain() {
     const classes = useStyles();
     return(
         <div className={classes.root}>
-        <GridList cellHeight={630} className={classes.gridList} cols={5}>
+        <GridList cellHeight={580} className={classes.gridList} cols={5}>
             {tileData.map(tile => (
             <GridListTile key={tile.title} cols={tile.cols || 1}>
                 <Widget widgetUsed={tile.widget}></Widget>

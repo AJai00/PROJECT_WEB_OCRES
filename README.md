@@ -21,3 +21,26 @@ Les instructions sont à retrouver dans le pdf instruction.pdf.
 **Le non respect de ces instructions entraînera des pertes de points alors prenez le temps de tout lire et de poser des questions si vous ne comprenez pas**
 
 Pour rappel, la probabilité de recevoir une réponse à un mail envoyé quelques heures avant le rendu est très proche de 0.
+
+
+## Introduction
+
+Ce repo git contient deux repertoires. L'un concerne la partie backend et l'autre la partie frontend.
+
+## Notre trello
+
+https://trello.com/b/oltoAOM8/web
+
+
+## Instructions
+
+
+## Storybook
+
+Afin de lancer le storybook, 
+
+    cd /frontend/
+
+    npm run storybook
+
+

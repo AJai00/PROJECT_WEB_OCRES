@@ -20,10 +20,10 @@ import {Link} from 'react-router-dom';
 
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { orange } from '@material-ui/core/colors';
 
 
 const drawerWidth = 250;
+const rawerheight = 20;
 
 const useStyles = makeStyles(theme => ({
 
@@ -42,19 +42,23 @@ const useStyles = makeStyles(theme => ({
         duration: theme.transitions.duration.enteringScreen,
     }),
     marginRight: drawerWidth,
+    
     },
     title: {
     flexGrow: 1,
+    
     },
     hide: {
     display: 'none',
     },
     drawer: {
     width: drawerWidth,
-    flexShrink: 0,
+    flexShrink: 1,
+    
     },
     drawerPaper: {
     width: drawerWidth,
+    height: 195,
     },
     drawerHeader: {
     display: 'flex',
@@ -62,6 +66,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(0, 1),
     ...theme.mixins.toolbar,
     justifyContent: 'flex-start',
+    
     },
     
 }));

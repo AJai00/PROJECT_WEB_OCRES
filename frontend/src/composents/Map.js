@@ -16,10 +16,10 @@ class Map extends React.Component {
 
 
   state = {
-    address: "",
-    city: "",
-    area: "",
-    state: "",
+    adresse: "",
+    departement: "",
+    ville: "",
+    région: "",
     zoom: 15,
     height: 400,
     mapPosition: {
@@ -51,17 +51,17 @@ class Map extends React.Component {
           Geocode.fromLatLng(position.coords.latitude, position.coords.longitude)
   .then(response => {
   console.log('response', response)
-  const address = response.results[0].formatted_address,
+  const adresse = response.results[0].formatted_address,
         addressArray = response.results[0].address_components,
-        city = this.getCity(addressArray),
-        area = this.getArea(addressArray),
-        state = this.getState(addressArray)  
+        departement = this.getdepartement(addressArray),
+        ville = this.getville(addressArray),
+        région = this.getState(addressArray)  
   
         this.setState({
-          address: (address) ? address : "",
-          area: (area) ? area : "",
-          city: (city) ? city : "",
-          state: (state) ? state: "",
+          adresse: (adresse) ? adresse : "",
+          ville: (ville) ? ville : "",
+          departement: (departement) ? departement : "",
+          région: (région) ? région: "",
           
   
         })
@@ -76,24 +76,24 @@ class Map extends React.Component {
   
   
   
-  getCity = (addressArray) => {
-      let city = '';
+  getdepartement = (addressArray) => {
+      let departement = '';
       for(let index = 0; index < addressArray.length; index++){
         if(addressArray[index].types[0] && 'administrative_area_level_2' === addressArray[index].types[0]){
-        city = addressArray[index].long_name;
-        return city;
+        departement = addressArray[index].long_name;
+        return departement;
       }
   }
   }
   
-  getArea = (addressArray) => {
-    let area = '';
+  getville = (addressArray) => {
+    let ville = '';
     for(let index = 0; index < addressArray.length; index++){
       if(addressArray[index].types[0]){
       for (let j = 0; j < addressArray.length; j++){
         if('sublocality_level_1' === addressArray[index].types[j] || 'locality' === addressArray[index].types[j]){
-          area = addressArray[index].long_name;
-          return area;
+          ville = addressArray[index].long_name;
+          return ville;
         }
       }
       }
@@ -101,12 +101,12 @@ class Map extends React.Component {
   }
   
   getState = (addressArray) => {
-    let state = '';
+    let région = '';
     for (let index = 0; index < addressArray.length; index++) {
       for (let index = 0; index < addressArray.length; index++) {
         if(addressArray[index].types[0] && 'administrative_area_level_1' === addressArray[index].types[0]){
-          state = addressArray[index].long_name;
-          return state
+          région = addressArray[index].long_name;
+          return région
         }
       }
     }
@@ -125,17 +125,17 @@ class Map extends React.Component {
     Geocode.fromLatLng(newLat, newLng)
     .then(response => {
     console.log('response', response)
-    const address = response.results[0].formatted_address,
+    const adresse = response.results[0].formatted_address,
           addressArray = response.results[0].address_components,
-          city = this.getCity(addressArray),
-          area = this.getArea(addressArray),
-          state = this.getState(addressArray)  
+          departement = this.getdepartement(addressArray),
+          ville = this.getville(addressArray),
+          région = this.getState(addressArray)  
     
           this.setState({
-            address: (address) ? address : "",
-            area: (area) ? area : "",
-            city: (city) ? city : "",
-            state: (state) ? state: "",
+            adresse: (adresse) ? adresse : "",
+            ville: (ville) ? ville : "",
+            departement: (departement) ? departement : "",
+            région: (région) ? région: "",
             markerPosition: {
               lat: newLat,
               lng: newLng
@@ -158,19 +158,19 @@ class Map extends React.Component {
   }
   
   onPlaceSelected=(place) => {
-  const address = place.formatted_address,
+  const adresse = place.formatted_address,
       addressArray = place.address_components,
-      city = this.getCity(addressArray),
-      area = this.getArea(addressArray),
-      state = this.getState(addressArray),
+      departement = this.getdepartement(addressArray),
+      ville = this.getville(addressArray),
+      région = this.getState(addressArray),
       newLat = place.geometry.location.lat(),
       newLng = place.geometry.location.lng();
   
       this.setState({
-        address: (address) ? address : "",
-        area: (area) ? area : "",
-        city: (city) ? city : "",
-        state: (state) ? state: "",
+        adresse: (adresse) ? adresse : "",
+        ville: (ville) ? ville : "",
+        departement: (departement) ? departement : "",
+        région: (région) ? région: "",
         markerPosition: {
           lat: newLat,
           lng: newLng
@@ -221,12 +221,12 @@ class Map extends React.Component {
   
         <div style={{padding: '1rem', margin: '0 auto', maxWidth: 1000}}>
   
-          <h1>Google Map Basic</h1>
+        
           <Descriptions bordered>
-      <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
-      <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
-      <Descriptions.Item label="State">{this.state.state}</Descriptions.Item>
-      <Descriptions.Item label="Address">{this.state.address}</Descriptions.Item>
+          <Descriptions.Item label="departement">{this.state.departement}</Descriptions.Item>
+          <Descriptions.Item label="ville">{this.state.ville}</Descriptions.Item>
+          <Descriptions.Item label="région">{this.state.région}</Descriptions.Item>
+          <Descriptions.Item label="adresse">{this.state.adresse}</Descriptions.Item>
       
      
     </Descriptions>
