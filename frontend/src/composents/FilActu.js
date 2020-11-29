@@ -15,12 +15,11 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 const useStyles = makeStyles(theme => ({
   root: {
     
-    width: '50%',
-    height: '20em',
+    width: '100%',
+    height: '35em',
     overflowY: 'scroll',
     flexWrap: 'wrap',
-    backgroundColor:  "#bbdefb",
-    borderRadius: '15%'
+   
   },
   inline: {
     display: 'inline',
@@ -34,27 +33,27 @@ function Actu(){
 const classes = useStyles();
 const data = [
   {
-      userName: "Monsieur 1",
+      userName: "Bill",
       report: "Super dashboard merci !"
   },
   {
-      userName: "Monsieur 2",
-      report: "Excellent ce dashboard me facilite tellement la vie ! ?"
+      userName: "Fred",
+      report: "J'ai bien roulé aujourd'hui !"
   },
   {
-      userName: "Madame 1",
+      userName: "Benoît",
       report: "Blabla numéro 3"
   },
   {
-      userName: "Madame 2",
-      report: "Blabla numéro 2"
+      userName: "Malik",
+      report: "Plus que 2h30"
 },
   {
     userName: "Joe",
-    report: " Je scroll"
+    report: " Cette radio est géniale"
 },
 {
-  userName: "Jean",
+  userName: "Jeanne",
   report: "Bla Bla"
 },
 {
@@ -64,6 +63,10 @@ const data = [
 {
   userName: "Joey",
   report: "Bonne journée"
+},
+{
+  userName: "Mike",
+  report: "Qu'est ce que je vais bien pouvoir manger au dîner ?"
 },
 ]
 

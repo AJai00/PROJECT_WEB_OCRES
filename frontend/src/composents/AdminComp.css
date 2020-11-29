@@ -1,0 +1,10 @@
+.listUser {
+    width: 100%;
+    height: 25%;
+    max-width: 550;
+    background-color: #e8f5e9;
+    border-width: 5;
+    border-style:inset;
+    border-color:#829baf;
+    overflow-y: scroll;
+  }

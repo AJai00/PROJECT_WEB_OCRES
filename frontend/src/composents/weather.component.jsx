@@ -1,6 +1,5 @@
 import React from "react";
 import "./weather.style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const Weather = props => {
   return (
@@ -16,9 +15,7 @@ const Weather = props => {
           <h1 className="py-2">{props.temp_celsius}&deg;</h1>
         ) : null}
 
-
-          
-        {/* montre la temp min et max */}
+        {/* show max and min temp */}
         {maxminTemp(props.temp_min, props.temp_max)}
 
         {/* Weather description */}
@@ -32,7 +29,6 @@ const Weather = props => {
 };
 
 export default Weather;
-
 
 function maxminTemp(min, max) {
   if (max && min) {

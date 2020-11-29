@@ -1,44 +1,73 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Compteur from './composents/Compteur';
-import ShowHide from './composents/ShowHide';
-import Taille from './composents/Taille';
-import Actu from './composents/FilActu';
-import Meteo from './composents/Weather';
+import Routes from './routes';
 
-import Form from "./composents/form.component";
-import Weather from "./composents/weather.component";
-import "bootstrap/dist/css/bootstrap.min.css";
+import NavBarDash from './composents/NavBarDash';
+
+
+import clsx from 'clsx';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+
 
 
 function App() {
-  return (
-   <div className="App">
+
+  const drawerWidth = 250;
+
+  const useStyles = makeStyles(theme => ({
+    root: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      backgroundColor: "",
+      
+      height:"100%",
+      
+    },
+    content: {
+      flexGrow: 2,
+      padding: theme.spacing(3),
+      transition: theme.transitions.create('margin', {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
+      }),
+      marginRight: 0,
+      height:"100%",
+       
+    },
+    contentShift: {
+      transition: theme.transitions.create('margin', {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      marginRight: drawerWidth,
+    },
     
+  }));
+
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
 
 
-    <Compteur/>
-     <hr/>
-     <ShowHide/>
-     <hr/>
-     <Taille/>
-     <hr/>
-     <Actu/>
-     <hr/>
-     <Meteo/>
-   </div>
+  return (
+    <div className={classes.root}>
+
+      <header className="App-header">
+        <NavBarDash/>
+      </header>
+
+      <main className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}>
+          
+          <Routes/>
+        
+      </main>
+
+    </div>
   );
 }
 
 export default App;
-/*<Compteur/>
-     <hr/>
-     <ShowHide/>
-     <hr/>
-     <Taille/>
-     <hr/>
-     <Actu/>
-     <hr/>
-     */
+

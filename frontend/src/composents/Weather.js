@@ -108,8 +108,8 @@ class Meteo extends React.Component {
           cityname={this.state.city}
           weatherIcon={this.state.icon}
           temp_celsius={this.state.celsius}
-          //temp_max={this.state.temp_max}
-          //temp_min={this.state.temp_min}
+          temp_max={this.state.temp_max}
+          temp_min={this.state.temp_min}
           description={this.state.description}
         />
       </div>

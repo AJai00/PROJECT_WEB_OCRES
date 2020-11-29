@@ -5,12 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('./assets/background.jpg');
+  background: url('./assets/road.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+  /*
+
+  */

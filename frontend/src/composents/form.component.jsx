@@ -1,6 +1,6 @@
 import React from "react";
 import "./form.style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Form = props => {
   return (
