@@ -10,6 +10,7 @@
     "bootstrap": "^4.5.3",
     "google": "^2.1.0",
     "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "^16.11.0",
     "react-geocode": "^0.2.2",
     "react-google-autocomplete": "^1.2.6",

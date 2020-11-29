@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import * as ReactBootStrap from "react-bootstrap";
 import React from 'react';
 import './App.css';
 import Routes from './routes';
@@ -8,7 +8,7 @@ import NavBarDash from './composents/NavBarDash';
 
 
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 
 
@@ -47,7 +47,7 @@ function App() {
   }));
 
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open] = React.useState(false);
 
 
   return (

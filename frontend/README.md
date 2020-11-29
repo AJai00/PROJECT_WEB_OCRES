@@ -1,8 +1,16 @@
 
 ## Documentation
 
-Ce projet est un projet destiné aux chauffeurs routiers leurs proposants plusieurs fonctionnalités pour leur facilter la vie.
+Ce projet est un projet destiné aux chauffeurs routiers leur proposants plusieurs fonctionnalités pour leur facilter la vie.
 
+## Wireframe
+
+https://xd.adobe.com/view/129c8b67-99ff-46c7-9ebf-06520f972671-47cf/
+
+
+## Trello
+
+https://trello.com/b/oltoAOM8/web
 
 
 ## Lancer l'app

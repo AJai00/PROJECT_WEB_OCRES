@@ -12,7 +12,7 @@ export default function AdminComp() {
       <div >
           <Grid style={{marginTop:"5%"}} container spacing={2}>
               <Grid style={{marginLeft:"15%"}} item xs={4}>
-                <FormUser/>
+                 <FormUser/> 
               </Grid>
               <Grid item xs={6}>
                 <ListUser/>

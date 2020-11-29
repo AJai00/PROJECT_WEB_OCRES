@@ -1,12 +1,13 @@
 import React from 'react';
 
 import Widget from './Widget';
-//import RadarWidget from './RadarWidget';
+
 import Camembert from './Camembert';
 import Courbe from './Courbe';
 import FilActu from './FilActu';
 import Map from './Map';
 import Weather from './Weather';
+import Tab from './Tab';
 
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
@@ -33,10 +34,15 @@ const useStyles = makeStyles(theme => ({
 const tileData = [
     {
         title: 'Trafic autoroutier france metropolitaine',
-        cols: '5',
+        cols: '3',
         widget: <Camembert/>
 
         
+    },
+    {
+        
+        cols: '2',
+        widget: <Tab/>
     },
     {    
         title: 'Trafic autoroutier france metropolitaine',
@@ -61,11 +67,7 @@ const tileData = [
         widget: <Weather/>
     },
     
-    /*{
-        
-        cols: '2',
-        widget: <PieWidget/>
-    },*/
+
 ];
 
 export default function GridListMain() {
