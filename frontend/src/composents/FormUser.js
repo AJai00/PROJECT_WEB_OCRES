@@ -121,24 +121,3 @@ export default function FormUser() {
     </div>
   );
 }
-/*
-
-        <Grid container spacing={1} alignItems="flex-end" style={{paddingTop: "15px",}}>
-          <Grid item>
-            <AspectRatioIcon />
-          </Grid>
-          <Grid item>
-            <InputLabel id="label-size">Size of the house :</InputLabel>
-            <Select
-              labelId=""
-              id=""
-              style={{ minWidth: 120}}
-            >
-              <MenuItem value="small">Small</MenuItem>
-              <MenuItem value="medium">Medium</MenuItem>
-              <MenuItem value="big">Big</MenuItem>
-            </Select>
-          </Grid>
-        </Grid>
-
-        */

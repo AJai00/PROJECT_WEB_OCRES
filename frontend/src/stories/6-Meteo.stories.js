@@ -13,7 +13,7 @@ export const Widget = () => <Meteo></Meteo>;
 export const Déscription = () => (
   
     <div>
-      Les ecriture sont invisible lorsque le widget est lancé sur storybook mais il fonctionne tout de même. Dans la version normale tout fonctionne bien
+      Les ecritures sont invisibles lorsque le widget est lancé sur storybook mais il fonctionne tout de même. Dans la version normale tout fonctionne bien
     </div>
   
 );
