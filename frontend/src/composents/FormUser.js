@@ -41,7 +41,18 @@ const useStyles = makeStyles(theme => ({
 
 
 export default function FormUser() {
+
+
   const classes = useStyles();
+
+
+  
+
+  /*createUser() {
+
+    return Axios.post(`http://localhost:3420/api`, {prenom:this.state.prenom, nom:this.state.nom, vehicule:this.state.vehicule})
+
+  }*/
 
 
   return (
@@ -113,11 +124,15 @@ export default function FormUser() {
           </Grid>
         </Grid>
         
-        <Button style={{paddingTop: "15px",}} >Add new user</Button>
+        <Button style={{paddingTop: "15px",}} onClick = {()=> this.createUser()}>Add new user</Button>
         <Button style={{paddingTop: "15px",}} >Delete user</Button>
         <Button style={{paddingTop: "15px",}} >Modify user</Button>
 
       </Box>
     </div>
+
+
   );
+
+
 }

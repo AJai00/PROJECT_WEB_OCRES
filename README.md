@@ -22,6 +22,12 @@ https://trello.com/b/oltoAOM8/web
 
 ## Instructions
 
+lancer projet:
+
+dans le back, faire la commande suivante:
+
+npm run projet (lance le front + le back)
+
 
 ## Storybook
 

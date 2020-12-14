@@ -3,12 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon server.js",
+    "frontend": "cd ../frontend && npm start", 
+    "projet": "concurrently -n 'back,front' -c 'red,green' \"nodemon server.js\" \"npm run frontend\""
   },
   "dependencies": {
+    "concurrently": "^5.3.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "express": "^4.16.4",
+    "g": "^2.0.1",
+    "mongoose": "^5.11.7",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.6"
   }
 }

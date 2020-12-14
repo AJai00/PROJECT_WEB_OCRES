@@ -1,47 +1,123 @@
 import React from 'react';
 import * as ReactBootStrap from "react-bootstrap";
+import axios from 'axios';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+import "./Tab.css";
 
 
-const Tab = () => {
-  const players = [
-    {ID: "1", Nom: "Hamilton", Prénom: "Lewis", Véhicule: "TGS"},
-    {ID: "2", Nom: "Jones", Prénom: "Jonny", Véhicule: "TGM"},
-    {ID: "3", Nom: "Edwards", Prénom: "Leon", Véhicule: "TGL"},
-    {ID: "4", Nom: "Thompson", Prénom: "Stephen", Véhicule: "XLION"},
-    {ID: "5", Nom: "Tyson", Prénom: "Mike", Véhicule: "TGE"},
+
+class Tab extends React.Component {
   
-  ]
 
-const renderPlayer = (player, index) => {
-  return(
-    <tr key={index}>
-      <td>{player.ID}</td>
-      <td>{player.Nom}</td>
-      <td>{player.Prénom}</td>
-      <td>{player.Véhicule}</td>
+  state = {
+
+        /*id:'',
+        nom:'',
+        prenom:'',
+        vehicule:'',
+        valeurs: undefined*/
+        data: []
+  };
+
+  componentDidMount(){
+   // this.downloadData();
+   axios
+      .get("http://localhost:3420/api/")
+      .then(response => {
+
+        const newData = response.data;
+        console.log(newData);
+
+        const newState = Object.assign({}, this.state, {
+          data: newData
+        });
+
+        this.setState(newState);
+      })
+      .catch(error => console.log(error));
 
 
-    </tr>
-  )
 }
+    
+/*downloadData (){
+
+axios.get('http://localhost:3420/api/')
+    .then(result => {
+      const contenu = result.data;
+      this.setState({valeurs: contenu },()=>{});
+      console.log(this.state.valeurs);
+    })
+}*/
   
-  return (
-    <div classname="app">
-      <ReactBootStrap.Table striped bordered hover>
+  
+  render () {
+
+    return (
+      <div className="listMembers">
+    {this.state.data.map(value => {
+      const labelId = `checkbox-list-label-${value}`;
+
+      
+
+    return (
+
+
+
+
+<ReactBootStrap.Table striped bordered hover>
   <thead>
     <tr>
-    <th>ID</th> 
-      <th>Nom</th>
-      <th>Prénom</th>
-      <th>Véhicule</th>
+      <th>Nom/Prénom/Véhicule/ID</th>  
+      
     </tr>
   </thead>
-  <tbody>
-    {players.map(renderPlayer)}
-  </tbody>
+
+  <thead>
+
+   <ListItem key={value} role={undefined} dense button >
+              <ListItemText id={labelId} secondary={`${value.nom} | ${value.prenom} | ${value.vehicule}| UserID ${value._id} `} />
+              <ListItemSecondaryAction>
+                <IconButton edge="end" aria-label="comments">
+                  <DeleteIcon />
+                </IconButton>
+              </ListItemSecondaryAction>
+            </ListItem> 
+
+    
+
+
+  </thead>
+  
+
 </ReactBootStrap.Table>
-    </div>
+
+    
+
+      /* { this.state.valeurs ? this.state.valeurs.map ((e) => (
+          <div>
+          <p>{e.prenom}</p>
+          <p> {e.nom}</p>
+          <p> {e.vehicule}</p>
+          </div>
+
+          
+         
+        )): " "}  */
+
+
+     
+
+
+  );
+})}
+</div>
   );
 }
 
-export default Tab;
+}export default Tab;

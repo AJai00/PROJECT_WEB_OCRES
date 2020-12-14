@@ -1,0 +1,9 @@
+.listMembers {
+    width: 100%;
+    height: 100%;
+    max-width: 550;
+    background-color: #bbdefb;
+    border-width: 5;
+   
+    overflow-y: scroll;
+  }

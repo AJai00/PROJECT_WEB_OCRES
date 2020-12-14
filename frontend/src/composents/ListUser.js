@@ -17,7 +17,7 @@ export default class CheckboxList extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3420/users/")
+      .get("http://localhost:3420/api/")
       .then(response => {
 
         const newData = response.data;
@@ -42,7 +42,7 @@ export default class CheckboxList extends React.Component {
   
           return (
             <ListItem key={value} role={undefined} dense button >
-              <ListItemText id={labelId} primary={`UserID ${value._id} | ${value.location}`} />
+              <ListItemText id={labelId} primary={`${value.nom} | ${value.prenom} | ${value.vehicule}| UserID ${value._id} `} />
               <ListItemSecondaryAction>
                 <IconButton edge="end" aria-label="comments">
                   <DeleteIcon />

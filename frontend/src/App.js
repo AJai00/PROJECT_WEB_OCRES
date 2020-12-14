@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import * as ReactBootStrap from "react-bootstrap";
+
 import React from 'react';
 import './App.css';
 import Routes from './routes';
