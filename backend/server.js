@@ -18,9 +18,7 @@ const routes = require('./routes/tab');
  */
 
 const mongoDbUri ='mongodb+srv://Arthur:motdepassearthur@projetwidgets.johpw.mongodb.net/<dbname>?retryWrites=true&w=majority';
-//const mongoDbDatabase ='dashboardProject';
 
-// ajouter ca entre les guillemets en dessous:    /${mongoDbDatabase}
 
 mongoose.connect(`${mongoDbUri}` || `mongodb://localhost:27017`,{ 
     useUnifiedTopology: true,
@@ -40,5 +38,6 @@ mongoose.connection.on('connected', () => {
 //const server = http.createServer(app);
 app.use(morgan('tiny'));
 app.use('/api', routes);
+app.delete('/delete/:id', routes);
 
 app.listen(port, console.log(`Ca tourne sur le port ${port}`));

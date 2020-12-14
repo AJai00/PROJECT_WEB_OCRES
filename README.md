@@ -1,7 +1,7 @@
 
 ## Noms
 
-Jaillard Arthur
+Jaillard Arthur / 
 Adoudi Heddi
 
 
@@ -13,7 +13,7 @@ Ce repo git contient deux repertoires. L'un concerne la partie backend et l'autr
 
 ## Documentation
 
-Ce projet est destiné aux chauffeurs routiers leur proposants plusieurs fonctionnalités pour leur faciliter la vie.
+Ce projet est destiné aux chauffeurs routiers leur proposants plusieurs fonctionnalités pour leur faciliter la vie (météo/carte/stats...).
 
 ## Notre trello
 
@@ -23,6 +23,7 @@ https://trello.com/b/oltoAOM8/web
 ## Instructions
 
 lancer projet:
+
 
 dans le back, faire la commande suivante:
 

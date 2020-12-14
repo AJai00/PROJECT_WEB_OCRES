@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import "./AdminComp.css";
-import axios from "axios";
+import axios from 'axios';
 
 
 export default class CheckboxList extends React.Component {
@@ -32,6 +32,16 @@ export default class CheckboxList extends React.Component {
       .catch(error => console.log(error));
   }
 
+  deleteUser(id) {
+    axios
+      .delete("http://localhost:3420/delete/:id",[id])
+     
+      .then(function(res){
+        console.log(res.data);
+      });
+   
+  }
+
   
 
   render() {
@@ -45,7 +55,7 @@ export default class CheckboxList extends React.Component {
               <ListItemText id={labelId} primary={`${value.nom} | ${value.prenom} | ${value.vehicule}| UserID ${value._id} `} />
               <ListItemSecondaryAction>
                 <IconButton edge="end" aria-label="comments">
-                  <DeleteIcon />
+                  <DeleteIcon onClick = {()=> this.deleteUser()} />
                 </IconButton>
               </ListItemSecondaryAction>
             </ListItem>

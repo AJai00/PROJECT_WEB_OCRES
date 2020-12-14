@@ -1,4 +1,4 @@
-const UserModel = require('../../models/users.models');
+
 
 /**
  * SECURE : Params and Body
@@ -50,4 +50,4 @@ const create = async (req, res) => {
         res.status(400).json({ 'message': error.message });
     }
 };
-module.exports = create;
+module.exports = create;   

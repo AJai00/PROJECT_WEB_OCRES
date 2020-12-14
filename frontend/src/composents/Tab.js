@@ -44,17 +44,7 @@ class Tab extends React.Component {
 
 
 }
-    
-/*downloadData (){
 
-axios.get('http://localhost:3420/api/')
-    .then(result => {
-      const contenu = result.data;
-      this.setState({valeurs: contenu },()=>{});
-      console.log(this.state.valeurs);
-    })
-}*/
-  
   
   render () {
 
@@ -71,6 +61,7 @@ axios.get('http://localhost:3420/api/')
 
 
 <ReactBootStrap.Table striped bordered hover>
+  
   <thead>
     <tr>
       <th>Nom/Prénom/Véhicule/ID</th>  
@@ -98,17 +89,6 @@ axios.get('http://localhost:3420/api/')
 </ReactBootStrap.Table>
 
     
-
-      /* { this.state.valeurs ? this.state.valeurs.map ((e) => (
-          <div>
-          <p>{e.prenom}</p>
-          <p> {e.nom}</p>
-          <p> {e.vehicule}</p>
-          </div>
-
-          
-         
-        )): " "}  */
 
 
      
